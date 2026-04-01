@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty — beauty made for you ✨</title>
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-logo">Beauty</div>
+  <ul class="nav-links">
+    <li><a href="#trending">Shop</a></li>
+    <li><a href="#tiktok">TikTok Faves</a></li>
+    <li><a href="#quiz">Skin Quiz</a></li>
+    <li><a href="#kits">Kits</a></li>
+    <li><a href="#community">Community</a></li>
+  </ul>
+  <button class="nav-cta">✨ Join for free</button>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      🔥 500k+ glow-ups served
+    </div>
+    <h1>
+      beauty that's<br>
+      <span class="gradient-text">all you ✨</span>
+    </h1>
+    <p>Affordable, inclusive, and made for real teens. Find your glow without breaking the bank — from $5 lip glosses to full beginner kits.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">✨ Find my skin type</button>
+      <button class="btn-outline" onclick="document.getElementById('trending').scrollIntoView({behavior:'smooth'})">Shop now →</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">2M+</div><div class="stat-label">Happy shoppers</div></div>
+      <div class="stat"><div class="stat-num">$5</div><div class="stat-label">Starts from</div></div>
+      <div class="stat"><div class="stat-num">400+</div><div class="stat-label">Products</div></div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="float-card">
+      <div class="float-card-icon icon-pink">💄</div>
+      <div class="float-card-info">
+        <p>Glossy Lip Kit</p>
+        <span>⭐ 4.9 · 2.1k reviews</span>
+      </div>
+    </div>
+    <div class="float-card">
+      <div class="float-card-icon icon-purple">🌸</div>
+      <div class="float-card-info">
+        <p>Blush Duo</p>
+        <span>🔥 TikTok viral</span>
+      </div>
+    </div>
+    <div class="float-card">
+      <div class="float-card-icon icon-blue">🧴</div>
+      <div class="float-card-info">
+        <p>Clear Skin Serum</p>
+        <span>✨ Bestseller</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MARQUEE ── -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item">💖 free shipping over $25 <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">✨ new arrivals every week <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">🌈 100% cruelty-free <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">💅 student discount 15% off <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">🔥 TikTok's top picks now in stock <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">💖 free shipping over $25 <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">✨ new arrivals every week <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">🌈 100% cruelty-free <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">💅 student discount 15% off <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">🔥 TikTok's top picks now in stock <span class="marquee-dot">✦</span></span>
+  </div>
+</div>
+
+<!-- ── TRENDING ── -->
+<section class="trending" id="trending">
+  <div class="container">
+    <span class="section-label reveal">🔥 What's hot right now</span>
+    <h2 class="section-title reveal">Trending products</h2>
+    <p class="section-sub reveal">Loved by thousands of teens — rated, reviewed, and TikTok-approved.</p>
+
+    <div class="filter-pills reveal" style="margin-top: 1.5rem;">
+      <span class="pill active" onclick="setFilter(this,'all')">All</span>
+      <span class="pill" onclick="setFilter(this,'lips')">💋 Lips</span>
+      <span class="pill" onclick="setFilter(this,'skin')">🌿 Skin</span>
+      <span class="pill" onclick="setFilter(this,'eyes')">👁️ Eyes</span>
+      <span class="pill" onclick="setFilter(this,'cheeks')">🌸 Cheeks</span>
+    </div>
+
+    <div class="products-grid" id="products-grid">
+      <div class="product-card reveal" data-cat="lips">
+        <div class="product-card-img">
+          💄
+          <span class="product-badge badge-tiktok">TikTok viral</span>
+        </div>
+        <div class="product-card-body">
+          <p class="product-name">Juicy Glow Lip Gloss</p>
+          <p class="product-brand">glōsi originals</p>
+          <div class="product-footer">
+            <div>
+              <div class="stars">★★★★★</div>
+              <div class="product-price">$7.99</div>
+            </div>
+            <button class="add-btn" title="Add to cart">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-cat="skin">
+        <div class="product-card-img" style="background: linear-gradient(135deg,#E8F8FF,#CFFAFE);">
+          🌿
+          <span class="product-badge badge-new">New drop</span>
+        </div>
+        <div class="product-card-body">
+          <p class="product-name">Clear Skin SPF Moisturizer</p>
+          <p class="product-brand">glow daily</p>
+          <div class="product-footer">
+            <div>
+              <div class="stars">★★★★☆</div>
+              <div class="product-price"><span class="old">$18</span>$12.99</div>
+            </div>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-cat="cheeks">
+        <div class="product-card-img" style="background: linear-gradient(135deg,#FFF0F8,#FFD6EC);">
+          🌸
+          <span class="product-badge badge-sale">Sale</span>
+        </div>
+        <div class="product-card-body">
+          <p class="product-name">Soft Petal Blush Duo</p>
+          <p class="product-brand">rosy glow</p>
+          <div class="product-footer">
+            <div>
+              <div class="stars">★★★★★</div>
+              <div class="product-price"><span class="old">$14</span>$9.99</div>
+            </div>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-cat="eyes">
+        <div class="product-card-img" style="background: linear-gradient(135deg,#EDE9FE,#DDD6FE);">
+          ✨
+          <span class="product-badge">Bestseller</span>
+        </div>
+        <div class="product-card-body">
+          <p class="product-name">Shimmer Eye Palette</p>
+          <p class="product-brand">glōsi originals</p>
+          <div class="product-footer">
+            <div>
+              <div class="stars">★★★★★</div>
+              <div class="product-price">$14.99</div>
+            </div>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-cat="lips">
+        <div class="product-card-img" style="background: linear-gradient(135deg,#FEF3C7,#FDE68A);">
+          🍓
+          <span class="product-badge badge-tiktok">TikTok viral</span>
+        </div>
+        <div class="product-card-body">
+          <p class="product-name">Strawberry Tinted Balm</p>
+          <p class="product-brand">kissy lips</p>
+          <div class="product-footer">
+            <div>
+              <div class="stars">★★★★★</div>
+              <div class="product-price">$5.99</div>
+            </div>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-cat="skin">
+        <div class="product-card-img" style="background: linear-gradient(135deg,#ECFDF5,#D1FAE5);">
+          🧴
+          <span class="product-badge badge-new">New drop</span>
+        </div>
+        <div class="product-card-body">
+          <p class="product-name">Niacinamide Glow Serum</p>
+          <p class="product-brand">skin lab</p>
+          <div class="product-footer">
+            <div>
+              <div class="stars">★★★★☆</div>
+              <div class="product-price">$9.99</div>
+            </div>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TIKTOK ── -->
+<section class="tiktok-section" id="tiktok">
+  <div class="container">
+    <span class="section-label reveal">🎵 As seen on TikTok</span>
+    <h2 class="section-title reveal">Trending on your FYP</h2>
+    <p class="section-sub reveal">Real teens, real looks. These products broke the internet — now they can break out your glow.</p>
+
+    <div class="tiktok-grid">
+      <div class="tiktok-card reveal">
+        <div class="tiktok-card-bg">💄</div>
+        <div class="tiktok-play"><div class="play-btn">▶</div></div>
+        <div class="tiktok-info">
+          <div class="tiktok-user">@glossygirll</div>
+          <div class="tiktok-desc">this blush omg 😭✨ #GlowUp</div>
+          <div class="tiktok-likes">❤️ 2.4M likes</div>
+        </div>
+      </div>
+
+      <div class="tiktok-card reveal">
+        <div class="tiktok-card-bg">🌊</div>
+        <div class="tiktok-play"><div class="play-btn">▶</div></div>
+        <div class="tiktok-info">
+          <div class="tiktok-user">@skincarevibes</div>
+          <div class="tiktok-desc">my 3-step routine 💙 #TeenSkin</div>
+          <div class="tiktok-likes">❤️ 1.8M likes</div>
+        </div>
+      </div>
+
+      <div class="tiktok-card reveal">
+        <div class="tiktok-card-bg">🌿</div>
+        <div class="tiktok-play"><div class="play-btn">▶</div></div>
+        <div class="tiktok-info">
+          <div class="tiktok-user">@naturalglow.teen</div>
+          <div class="tiktok-desc">NO filter, just this serum 🌿</div>
+          <div class="tiktok-likes">❤️ 980K likes</div>
+        </div>
+      </div>
+
+      <div class="tiktok-card reveal">
+        <div class="tiktok-card-bg">⭐</div>
+        <div class="tiktok-play"><div class="play-btn">▶</div></div>
+        <div class="tiktok-info">
+          <div class="tiktok-user">@makeupmeetup</div>
+          <div class="tiktok-desc">full glam under $20 👑✨</div>
+          <div class="tiktok-likes">❤️ 3.1M likes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKIN QUIZ ── -->
+<section class="quiz-section" id="quiz">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="section-label reveal">🔬 Personalized for you</span>
+      <h2 class="section-title reveal">Find your skin type</h2>
+      <p class="section-sub reveal" style="margin: 0 auto;">Answer 4 quick questions and get a personalized routine + product picks. Takes 30 seconds!</p>
+    </div>
+
+    <div class="quiz-card reveal" id="quiz-card">
+      <!-- Question 1 -->
+      <div id="q1">
+        <div class="quiz-emoji">🌅</div>
+        <p class="quiz-question">How does your skin feel by midday?</p>
+        <p class="quiz-sub">Think about a typical school day</p>
+        <div class="quiz-progress">
+          <div class="progress-dot active"></div>
+          <div class="progress-dot"></div>
+          <div class="progress-dot"></div>
+          <div class="progress-dot"></div>
+        </div>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="selectOpt(this,'q1','oily')"><span class="quiz-option-icon">✨</span> Super shiny & oily</div>
+          <div class="quiz-option" onclick="selectOpt(this,'q1','dry')"><span class="quiz-option-icon">🍂</span> Tight & dry</div>
+          <div class="quiz-option" onclick="selectOpt(this,'q1','combo')"><span class="quiz-option-icon">☯️</span> Oily in T-zone only</div>
+          <div class="quiz-option" onclick="selectOpt(this,'q1','normal')"><span class="quiz-option-icon">🌟</span> Balanced & fine</div>
+        </div>
+        <button class="quiz-btn" onclick="nextQ(1)">Next question →</button>
+      </div>
+
+      <!-- Question 2 -->
+      <div id="q2" style="display:none">
+        <div class="quiz-emoji">🔍</div>
+        <p class="quiz-question">Any skin concerns?</p>
+        <p class="quiz-sub">Select your biggest challenge</p>
+        <div class="quiz-progress">
+          <div class="progress-dot done"></div>
+          <div class="progress-dot active"></div>
+          <div class="progress-dot"></div>
+          <div class="progress-dot"></div>
+        </div>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="selectOpt(this,'q2','acne')"><span class="quiz-option-icon">😤</span> Breakouts & acne</div>
+          <div class="quiz-option" onclick="selectOpt(this,'q2','dull')"><span class="quiz-option-icon">😴</span> Dull & uneven tone</div>
+          <div class="quiz-option" onclick="selectOpt(this,'q2','sensitive')"><span class="quiz-option-icon">🌷</span> Sensitive & red</div>
+          <div class="quiz-option" onclick="selectOpt(this,'q2','none')"><span class="quiz-option-icon">😊</span> Not much really!</div>
+        </div>
+        <button class="quiz-btn" onclick="nextQ(2)">Next →</button>
+      </div>
+
+      <!-- Question 3 -->
+      <div id="q3" style="display:none">
+        <div class="quiz-emoji">🧴</div>
+        <p class="quiz-question">Current skincare routine?</p>
+        <p class="quiz-sub">Be honest, no judgment here!</p>
+        <div class="quiz-progress">
+          <div class="progress-dot done"></div>
+          <div class="progress-dot done"></div>
+          <div class="progress-dot active"></div>
+          <div class="progress-dot"></div>
+        </div>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="selectOpt(this,'q3','none')"><span class="quiz-option-icon">😅</span> Just water lol</div>
+          <div class="quiz-option" onclick="selectOpt(this,'q3','basic')"><span class="quiz-option-icon">🚿</span> Cleanser only</div>
+          <div class="quiz-option" onclick="selectOpt(this,'q3','some')"><span class="quiz-option-icon">✅</span> Cleanser + moisturizer</div>
+          <div class="quiz-option" onclick="selectOpt(this,'q3','full')"><span class="quiz-option-icon">💪</span> Full multi-step routine</div>
+        </div>
+        <button class="quiz-btn" onclick="nextQ(3)">Almost there →</button>
+      </div>
+
+      <!-- Question 4 -->
+      <div id="q4" style="display:none">
+        <div class="quiz-emoji">💰</div>
+        <p class="quiz-question">What's your beauty budget?</p>
+        <p class="quiz-sub">We'll match you to the perfect products</p>
+        <div class="quiz-progress">
+          <div class="progress-dot done"></div>
+          <div class="progress-dot done"></div>
+          <div class="progress-dot done"></div>
+          <div class="progress-dot active"></div>
+        </div>
+        <div class="quiz-options">
+          <div class="quiz-option" onclick="selectOpt(this,'q4','low')"><span class="quiz-option-icon">🪙</span> Under $10</div>
+          <div class="quiz-option" onclick="selectOpt(this,'q4','mid')"><span class="quiz-option-icon">💵</span> $10 – $25</div>
+          <div class="quiz-option" onclick="selectOpt(this,'q4','high')"><span class="quiz-option-icon">💳</span> $25 – $50</div>
+          <div class="quiz-option" onclick="selectOpt(this,'q4','any')"><span class="quiz-option-icon">💎</span> Whatever's best</div>
+        </div>
+        <button class="quiz-btn" onclick="showResult()">✨ Get my results!</button>
+      </div>
+
+      <!-- Result -->
+      <div id="q-result" style="display:none">
+        <div class="quiz-emoji" id="result-emoji">🌟</div>
+        <div class="result-badge" id="result-badge" style="background: var(--pink-pale); color: var(--pink);">Oily / Combo Skin</div>
+        <p class="quiz-question" id="result-title">Your skin is perfectly balanced!</p>
+        <p class="quiz-sub" id="result-desc" style="margin-bottom: 2rem;">Here's your personalized routine</p>
+        <div style="background: var(--pink-pale); border-radius: var(--radius-sm); padding: 1.2rem; margin-bottom: 2rem; text-align: left;">
+          <p style="font-weight: 800; color: var(--text); margin-bottom: 0.8rem;">Your 3-step starter routine:</p>
+          <div id="result-steps"></div>
+        </div>
+        <button class="quiz-btn" onclick="resetQuiz()">🔄 Retake quiz</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BEGINNER KITS ── -->
+<section class="kits-section" id="kits">
+  <div class="container">
+    <span class="section-label reveal">💝 Perfect for beginners</span>
+    <h2 class="section-title reveal">Starter kits</h2>
+    <p class="section-sub reveal">Everything you need, curated by our beauty editors. No overwhelm, just glow.</p>
+
+    <div class="kits-grid">
+      <div class="kit-card kit-1 reveal">
+        <div class="kit-header">
+          <span class="kit-emoji">💋</span>
+          <p class="kit-name">Lip Lover Kit</p>
+          <p class="kit-tagline">Your first lip collection ✨</p>
+        </div>
+        <div class="kit-body">
+          <ul class="kit-items">
+            <li>Glossy lip gloss (3 shades)</li>
+            <li>Tinted lip balm</li>
+            <li>Lip liner pencil</li>
+            <li>Mini mirror + applicator</li>
+          </ul>
+          <div class="kit-footer">
+            <div class="kit-price"><small>$35</small>$22.99</div>
+            <button class="btn-primary" style="font-size:0.85rem; padding: 0.6rem 1.4rem;">Add to bag</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="kit-card kit-2 reveal">
+        <div class="kit-header">
+          <span class="kit-emoji">🌟</span>
+          <p class="kit-name">Full Glam Starter</p>
+          <p class="kit-tagline">Your complete first makeup kit</p>
+        </div>
+        <div class="kit-body">
+          <ul class="kit-items">
+            <li>BB cream (3 shades)</li>
+            <li>Mascara + eyebrow gel</li>
+            <li>Blush + highlight duo</li>
+            <li>Setting spray</li>
+            <li>5-piece brush set</li>
+          </ul>
+          <div class="kit-footer">
+            <div class="kit-price"><small>$65</small>$39.99</div>
+            <button class="btn-primary" style="font-size:0.85rem; padding: 0.6rem 1.4rem; background: linear-gradient(135deg, var(--lavender), #9333EA);">Add to bag</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="kit-card kit-3 reveal">
+        <div class="kit-header">
+          <span class="kit-emoji">🌿</span>
+          <p class="kit-name">Glow Skin Kit</p>
+          <p class="kit-tagline">Simple routine for clear skin</p>
+        </div>
+        <div class="kit-body">
+          <ul class="kit-items">
+            <li>Gentle foaming cleanser</li>
+            <li>Niacinamide serum</li>
+            <li>SPF moisturizer</li>
+            <li>Spot treatment pen</li>
+          </ul>
+          <div class="kit-footer">
+            <div class="kit-price"><small>$45</small>$28.99</div>
+            <button class="btn-primary" style="font-size:0.85rem; padding: 0.6rem 1.4rem; background: linear-gradient(135deg, #22D3EE, #0EA5E9);">Add to bag</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKINCARE ROUTINE ── -->
+<section class="skincare-section" id="skincare">
+  <div class="container">
+    <span class="section-label reveal" style="background: rgba(110,231,183,0.2); color: #059669;">🌿 Science-backed, teen-approved</span>
+    <h2 class="section-title reveal">Simple skincare routine</h2>
+    <p class="section-sub reveal">Your morning routine in 4 easy steps — no confusing 12-step regimes. Just clear, healthy skin. 🌸</p>
+
+    <div class="routine-steps">
+      <div class="step-card reveal">
+        <div class="step-num">1</div>
+        <span class="step-icon">🧼</span>
+        <p class="step-title">Cleanse</p>
+        <p class="step-desc">Gentle foaming wash to clear away overnight oil. 60 seconds is all you need.</p>
+        <span class="step-arrow">→</span>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">2</div>
+        <span class="step-icon">💧</span>
+        <p class="step-title">Tone</p>
+        <p class="step-desc">Balance your skin's pH with a hydrating toner — no harsh alcohols here.</p>
+        <span class="step-arrow">→</span>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">3</div>
+        <span class="step-icon">✨</span>
+        <p class="step-title">Serum</p>
+        <p class="step-desc">Niacinamide for pores + vitamin C for glow. One pump does it all.</p>
+        <span class="step-arrow">→</span>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">4</div>
+        <span class="step-icon">☀️</span>
+        <p class="step-title">SPF Moisturize</p>
+        <p class="step-desc">Hydrate and protect. SPF 30+ is non-negotiable — your future self will thank you!</p>
+        <span class="step-arrow">→</span>
+      </div>
+    </div>
+
+    <div style="margin-top: 2.5rem; background: white; border-radius: var(--radius); padding: 2rem; border-left: 5px solid var(--mint);">
+      <p style="font-weight: 800; font-size: 1rem; color: var(--text); margin-bottom: 0.5rem;">💡 Myth-busting: "Oily skin doesn't need moisturizer"</p>
+      <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.7;">FALSE! Skipping moisturizer can actually make oily skin worse. When your skin gets dehydrated, it overproduces oil to compensate. A lightweight, non-comedogenic moisturizer is your oily skin's best friend! 🌿</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── COMMUNITY ── -->
+<section class="community-section" id="community">
+  <div class="container">
+    <span class="section-label reveal" style="background: rgba(192,132,252,0.15); color: var(--lavender);">💜 Real girls, real looks</span>
+    <h2 class="section-title reveal">Share your glow</h2>
+    <p class="section-sub reveal" style="margin: 0 auto;">Tag #glōsibeauty to be featured. Real looks, real skin, no filters needed.</p>
+
+    <div class="ugc-grid">
+      <div class="ugc-card reveal" style="background: linear-gradient(135deg,#FFD6EC,#FF6BB5);">
+        <span>💄</span>
+        <div class="ugc-overlay"><div class="ugc-username">@bella.glow</div><div class="ugc-likes">❤️ 4.2k likes</div></div>
+      </div>
+      <div class="ugc-card reveal" style="background: linear-gradient(135deg,#CFFAFE,#67E8F9);">
+        <span>🌸</span>
+        <div class="ugc-overlay"><div class="ugc-username">@fresh.faced</div><div class="ugc-likes">❤️ 2.8k likes</div></div>
+      </div>
+      <div class="ugc-card reveal" style="background: linear-gradient(135deg,#EDE9FE,#C084FC);">
+        <span>✨</span>
+        <div class="ugc-overlay"><div class="ugc-username">@glowupqueen</div><div class="ugc-likes">❤️ 6.1k likes</div></div>
+      </div>
+      <div class="ugc-card reveal" style="background: linear-gradient(135deg,#D1FAE5,#6EE7B7);">
+        <span>🌿</span>
+        <div class="ugc-overlay"><div class="ugc-username">@naturalskin.teen</div><div class="ugc-likes">❤️ 1.9k likes</div></div>
+      </div>
+      <div class="ugc-card reveal" style="background: linear-gradient(135deg,#FEF3C7,#FDE68A);">
+        <span>💛</span>
+        <div class="ugc-overlay"><div class="ugc-username">@sunshine.makeup</div><div class="ugc-likes">❤️ 3.3k likes</div></div>
+      </div>
+      <div class="ugc-card reveal" style="background: linear-gradient(135deg,#FBCFE8,#EC4899);">
+        <span>💗</span>
+        <div class="ugc-overlay"><div class="ugc-username">@pinkvibesonly</div><div class="ugc-likes">❤️ 5.7k likes</div></div>
+      </div>
+    </div>
+
+    <button class="btn-primary" style="margin: 0 auto; display: block;">📸 Share your look</button>
+  </div>
+</section>
+
+<!-- ── BADGES / GAMIFICATION ── -->
+<section class="badges-section" id="badges">
+  <div class="container">
+    <span class="section-label reveal">🏆 Earn rewards</span>
+    <h2 class="section-title reveal">Your beauty journey</h2>
+    <p class="section-sub reveal" style="margin: 0 auto;">Level up as you explore, review, and glow. Collect badges and unlock exclusive discounts.</p>
+
+    <div class="badges-grid">
+      <div class="badge-card reveal">
+        <span class="badge-icon">🌱</span>
+        <p class="badge-name">Glow Starter</p>
+        <p class="badge-desc">Make your first purchase</p>
+      </div>
+      <div class="badge-card reveal" style="background: var(--lavender-light); border-color: #DDD6FE;">
+        <span class="badge-icon">⭐</span>
+        <p class="badge-name">Review Queen</p>
+        <p class="badge-desc">Leave 5 product reviews</p>
+      </div>
+      <div class="badge-card reveal" style="background: var(--blue-light); border-color: #A5F3FC;">
+        <span class="badge-icon">💧</span>
+        <p class="badge-name">Skin Scientist</p>
+        <p class="badge-desc">Complete the skin quiz</p>
+      </div>
+      <div class="badge-card reveal" style="background: #D1FAE5; border-color: #A7F3D0;">
+        <span class="badge-icon">👑</span>
+        <p class="badge-name">Glōsi Legend</p>
+        <p class="badge-desc">Spend $100+ total</p>
+      </div>
+      <div class="badge-card reveal" style="background: #FEF3C7; border-color: #FDE68A;">
+        <span class="badge-icon">📸</span>
+        <p class="badge-name">Content Creator</p>
+        <p class="badge-desc">Share 3 looks</p>
+      </div>
+      <div class="badge-card reveal" style="background: #FCE7F3; border-color: #FBCFE8;">
+        <span class="badge-icon">🌺</span>
+        <p class="badge-name">Glow Ambassador</p>
+        <p class="badge-desc">Refer 5 friends</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">glōsi</div>
+        <p class="footer-desc">Beauty made for real teens. Inclusive, affordable, and cruelty-free. Your glow-up starts here.</p>
+        <div class="footer-social">
+          <a class="social-btn" href="#" title="TikTok">📱</a>
+          <a class="social-btn" href="#" title="Instagram">📷</a>
+          <a class="social-btn" href="#" title="YouTube">▶️</a>
+          <a class="social-btn" href="#" title="Pinterest">📌</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="#">New arrivals</a>
+        <a href="#">Under $10</a>
+        <a href="#">Bestsellers</a>
+        <a href="#">TikTok picks</a>
+        <a href="#">Starter kits</a>
+      </div>
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <a href="#">Skin quiz</a>
+        <a href="#">Beauty guides</a>
+        <a href="#">Routines</a>
+        <a href="#">Tutorials</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <a href="#">FAQs</a>
+        <a href="#">Shipping info</a>
+        <a href="#">Returns</a>
+        <a href="#">Contact us</a>
+        <a href="#">Student discount</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 glōsi beauty. All rights reserved. 💖</span>
+      <span>Made with ✨ for every kind of beautiful</span>
+    </div>
+  </div>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>
